@@ -1,0 +1,241 @@
+/**** H O M E ****/
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.mainButton {
+    border-radius: 9000px;
+    background-color: transparent;
+    border: 1px solid #a5a5a5;
+    color: #a5a5a5;
+    font-size: 1vw;
+    padding: .7vw;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s, transform .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+    position: relative;
+
+    &:hover {
+        background-color: #979797;
+        color: #ffffff;
+    }
+    &:active {
+        transform: scale(95%);
+    }
+}
+
+#homePresentation {
+    position: relative;
+    height: 80vh !important;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    h1 {
+        font-size: 5rem;
+        margin-bottom: 20px;
+    }
+}
+
+#homeAbout {
+    .sectionContent {
+        background-color: #001220;
+        height: 50vh !important;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 5fr 2fr;
+        position: relative;
+        z-index: 1;
+        transform: translateY(-243px);
+        h2 {
+            font-weight: 800;
+        }
+        .homeAboutText {
+            letter-spacing: 1px;
+            color: #ffffff;
+            padding: 0 5vw;
+            font-size: 125%;
+        }
+        img {
+            width: 75%;
+            border-radius: 20px;
+            padding: 1%;
+        }
+    }
+}
+
+#homeShop {
+    .sectionContent {
+        background-color: #ffffff;
+        height: 50vh !important;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        grid-template-columns: 2fr 5fr;
+        .homeText {
+            letter-spacing: 1px;
+            text-align: end;
+            color: #000000;
+            padding: 0 5vw;
+            font-size: 125%;
+        }
+    }
+}
+
+#homeConverter {
+    background-image: url(../assets/home/backgroundConverter.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Custom Background ↑ */
+    padding: 20% 0;
+    height: 50% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    h3 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    p {
+        letter-spacing: 1px;
+        font-size: 1.3rem;
+        padding: 0 5%;
+    }
+    /*Custom button v*/
+    button {
+        font-size: 1.5vw !important;
+        margin: 0;
+        font-size: 25px;
+        padding: 20px;
+        width: 20%;
+        background-color: #a5a5a5;
+        color: #ffffff;
+        transition: filter .3s, background-color .3s, color .3s;
+        &:hover {
+            background-color: transparent;
+            color: #000000;
+        }
+    }
+}
+
+@media (max-width: 1035px) {
+    #homePresentation {
+        div {
+            display: flex;
+            flex-direction: column;
+            button {
+                font-size: 3vw;
+                margin-bottom: 1%;
+            }
+        }
+    }
+}
+
+@media (max-width:750px) {
+    .sectionContent {
+        height: 95vh !important;
+        display: flex !important;
+        flex-direction: column-reverse;
+        .aboutText, .homeText {
+            margin-top: 3vh;
+            h2, p, button {
+                font-size: 3vw;
+            }
+        }
+    }
+    #homePresentation {
+        h1 {
+            font-size:8vw;
+        }
+    }
+    #homeAbout{
+        .sectionContent {
+            height: 80vh !important;
+        }
+    }
+    #homeShop {
+        height: 110vh;
+        .sectionContent {
+            height: 90vh !important;
+            flex-direction: column;
+        }
+    }
+    #homeConverter {
+        h3 {
+            font-size: 8vw;
+        }
+        p {
+            font-size: 3vw;
+        }
+        button {
+            width: 20vh;
+            font-size: 2vh !important;
+        }
+    }
+    .mainButton {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 520px) {
+    #picaCoinLogo {
+        height: 25px !important;
+    }
+    #homePresentation {
+        h1 {
+            font-size:12vw;
+        }
+        div {
+            button {
+                font-size: 5vw;
+            }
+        }
+    }
+    #homeAbout {
+        .sectionContent {
+            img {
+                margin: 5%;
+            }
+        }
+    }
+    .mainButton {
+        font-size: 4vw !important;
+        padding: 3% !important;
+    }
+    .homeText {
+        h2{
+            font-size: 125% !important;
+        }
+        p {
+            font-size: 105% !important;
+        }
+    }
+    #homeConverter {
+        p {
+            font-size: 4.5vw;
+        }
+    }
+}
+
+/*STARTUP ANIMATIONS*/
+.startupAnim {
+    animation-name: startupAnim;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.07,.39,.59,.94);
+}
+
+@keyframes startupAnim {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}

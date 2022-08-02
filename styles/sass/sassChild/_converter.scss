@@ -1,0 +1,138 @@
+/**** C O N V E R T E R ****/
+.converterForm {
+    transition: opacity 0.5s;
+}
+
+#title {
+    font-weight: 600;
+    color: #000000;
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+}
+
+.input {
+    padding: 5px;
+    margin: 5px 0;
+    width: 500px;
+}
+
+#converterMain {
+    background-image: url(../assets/converter/bg.svg);
+    background-size: cover;
+}
+
+#converter {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .PICUSDRatio {
+        color: rgb(0, 0, 0);
+    }
+}
+
+#picAmountInput, #usdAmountInput {
+    padding: 2% !important;
+}
+
+.buttonGroup {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    align-items: center;
+    div {
+        button{
+            margin-left: 1vw;
+        }
+    }
+}
+
+.converterButton {
+    font-family: 'Inconsolata', monospace !important;
+    background-color: transparent !important;
+    border: solid 1px rgba(166, 166, 166, 0.541) !important;
+    height: 5vh !important;
+    width: 10vw;
+    border-radius: 20px !important;
+    font-size: 2vh !important;
+    font-weight: 550 !important;
+    color: rgb(166, 166, 166) !important;
+    &:hover {
+        background-color: rgba(166, 166, 166, 0.541) !important;
+        border: solid 1px hsla(0, 0%, 40%, 0.2) !important;
+        color: white !important;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.29);
+    }
+}
+
+#debugPrice{
+    margin: 0 .6%;
+}
+
+.PICUSDRatio {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/*Debbuging (Equivalencia de PIC a USD Personalizada)*/
+#debugingUSDPrice {
+    transform: scale(70%);
+    position: relative;
+    right: 15%;
+    animation-name: debug;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    &:hover {
+        animation-name: estoEstaMalxd;
+        opacity: 100% !important;
+    }
+}
+
+@keyframes debug {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width:810px) {
+    .buttonGroup {
+        display: flex;
+        flex-direction: column;
+        div {
+            button, input {
+                width: 70vw;
+                margin: 5px 0;
+            }
+        }
+    }
+    .converterForm {
+        width: 100%;
+    }
+    #title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:530px) {
+    #title {
+        font-size: 5vw;
+        letter-spacing: 2px;
+    }
+    .converterForm {
+        div {
+            input {
+                width: 70vw;
+            }
+        }
+    }
+    .PICUSDRatio {
+        font-size: 3vw;
+    }
+}

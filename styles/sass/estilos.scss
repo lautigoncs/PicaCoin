@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Prompt:wght@100;200;600&display=swap');
+@import "sassChild/_header.scss";
+@import "sassChild/_footer.scss";
+@import "sassChild/_home.scss";
+@import "sassChild/_homeSpacers.scss";
+@import "sassChild/_converter.scss";
+@import "sassChild/_shop.scss";
+@import "sassChild/_about.scss";
+@import "sassChild/_popups.scss";
+
+* {
+    margin: 0;
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    position: absolute;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(133, 133, 133);
+    border-radius: 900px;
+    &:hover {
+        background-color: rgb(102, 102, 102);
+    }
+}
+
+.fontPrimary {
+    font-family: 'Dosis', sans-serif !important;
+}
+
+.fontSecondary {
+    font-family: 'Inconsolata', monospace !important;
+}
+
+html {
+    height: 100%;
+}

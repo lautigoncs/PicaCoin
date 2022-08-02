@@ -1,0 +1,33 @@
+/**** F O O T E R ****/
+
+footer {
+    background-image: linear-gradient(0deg, rgb(17, 17, 17), rgb(51, 51, 51));
+    ul {
+        li {
+            margin-top: 20px;
+            a{
+                color: rgb(255, 255, 255) !important;
+                text-decoration: none;
+                transition: color .2s;
+                &:hover {
+                    color: rgb(136, 136, 136);
+                }
+            }
+        }
+    }
+}
+
+.logoFooter {
+    height: 35px;
+    margin: 20px;
+}
+
+@media (max-width:490px) {
+    footer {
+        ul {
+            li {
+                font-size: 3vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Presentamos PicaCoin, la criptomoneda más innovadora, segura y práctica.">
+    <meta name="keywords" content="crypto, cryptocurrency, new crypto, crypto market, coinmarket, marketcap, money, crypto shop, shop, tienda, tienda crypto, criptomoneda">
+    <title>Comprar PIC - PicaCoin</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <link rel="stylesheet" href="../styles/bootstrap-5.2.0-beta1/dist/css/bootstrap.css">
+    <script src="../styles/bootstrap-5.2.0-beta1/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div id="popupContent"></div>
+    <header>
+        <nav class="navbar navbar-expand-lg p-2 ps-5 pe-5" id="header">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/logoFull.svg" id="picaCoinLogo" alt="PicaCoin">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="width: 100%;">
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" href="converter.html">Conversor de PIC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" href="#">Comprar PIC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" href="about.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" id="debuggingHeader">Debugging</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-end" id="userAccount">
+                        <a>
+                            <button type="button" class="btn loginBtn fontSecondary" id="button-user">Iniciar
+                                Sesión</button>
+                        </a>
+                        <a>
+                            <button type="button" class="btn registerBtn fontSecondary"
+                                id="button-user">Registrarse</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="shopHeaderSpacer"></div>
+    <main id="shopMainContainer">
+        <div class="d-flex align-items-center justify-content-center">
+            <img src="../assets/shop/shop.png">
+        </div>
+        <div id="shopContent">
+            <div class="productContent">
+                <h1 class="fontPrimary">PicaCoin</h1>
+                <div class="d-flex align-items-center fontSecondary">
+                    <small class="smallTextShop">$<span id="debugPrice">0.5</span></small>
+                    <div class="d-flex align-items-center">
+                        <p class="m-0 smallTextShop shopAmountPickerText">Cantidad de PICs:</p>
+                        <input type="number" id="shopAmountPicker" class="ms-2" value="0">
+                        <div id="alertPopup"></div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <button id="shopAgregarCarrito" class="buttonShop mt-3 mb-3 fontSecondary">Agregar al
+                        carrito</button>
+                    <button id="shopBorrarCarrito" class="buttonShop mt-3 mb-3 fontSecondary">Borrar del
+                        carrito</button>
+                </div>
+            </div>
+            <div class="clarification font-monospace text-center">
+                <div class="m-3">
+                    <p>Recuerde tener una cuenta antes de hacer la compra. En caso de que no lo haga, tendrá un plazo de
+                        <b>2 horas</b> para reclamar sus PICs. Recomendamos reclamarlas al menos 30 minutos antes de que
+                        termine su tiempo.</p>
+                    <p class="shopTOS">Al comprar PICs, usted está aceptando nuestros términos de servicio.</p>
+                    <div class="d-flex justify-content-center">
+                        <div class="cartBody">
+                            <p><b>CANTIDAD DE PICS A COMPRAR: <span id="cartAmount">0</span></b></p>
+                            <p><b>VALOR TOTAL DE COMPRA: $<span id="cartTotal">0</span> USD</b></p>
+                        </div>
+                    </div>
+                </div>
+                <button id="shopCheckout">Checkout</button>
+            </div>
+        </div>
+    </main>
+    <footer class="py-3 fontSecondary">
+        <ul class="nav justify-content-center border-bottom border-secondary pb-3 ms-5 me-5">
+            <li class="nav-item"><a href="../index.html" class="nav-link px-2">Inicio</a></li>
+            <li class="nav-item"><a href="converter.html" class="nav-link px-2">Conversor de PICs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">Tienda de PIC</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link px-2">Sobre nosotros</a></li>
+        </ul>
+        <div class="d-flex flex-column align-items-center">
+            <img src="../assets/logoFullVar.png" class="logoFooter">
+            <p class="text-center text-white">Copyright 2022 - Desarrollado por <a href="https://www.instagram.com/lauti.goncs" class="text-white">Lautaro Goncalves</a></p>
+        </div>
+    </footer>
+    <script src="../js/header.js" defer></script>
+    <script src="../js/debug.js" defer></script>
+    <script src="../js/shop.js" defer></script>
+    <script src="../js/user.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

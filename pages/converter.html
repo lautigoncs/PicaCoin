@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Presentamos PicaCoin, la criptomoneda más innovadora, segura y práctica.">
+    <meta name="keywords" content="crypto, cryptocurrency, new crypto, crypto market, coinmarket, marketcap, money, crypto shop, shop, tienda, tienda crypto, criptomoneda">
+    <title>Convetidor de PIC - PicaCoin</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <link rel="stylesheet" href="../styles/bootstrap-5.2.0-beta1/dist/css/bootstrap.css">
+    <script src="../styles/bootstrap-5.2.0-beta1/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div id="popupContent"></div>
+    <header>
+        <nav class="navbar navbar-expand-lg p-2 ps-5 pe-5" id="header">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/logoFull.svg" id="picaCoinLogo" alt="PicaCoin">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="width: 100%;">
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" href="#">Conversor de PIC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" href="shop.html">Comprar PIC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" href="about.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" id="debuggingHeader">Debugging</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-end" id="userAccount">
+                        <a>
+                            <button type="button" class="btn loginBtn fontSecondary" id="button-user">Iniciar
+                                Sesión</button>
+                        </a>
+                        <a>
+                            <button type="button" class="btn registerBtn fontSecondary"
+                                id="button-user">Registrarse</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="converterMain">
+        <div id="converter">
+            <div class="d-flex flex-column align-items-center">
+                <h1 class="fontPrimary" id="title">- CONVERSOR DE PIC A USD -</h1>
+                <form name="picCoinsToUSD" class="converterForm">
+                    <div class="buttonGroup">
+                        <input type="number" name="pic" class="form-control input fontSecondary" id="picAmountInput"
+                            placeholder="Ingrese el valor en PIC" min="0">
+                        <div>
+                            <button type="button" class="btn btn-primary btn-sm input converterButton"
+                                id="converterButton">Convertir</button>
+                        </div>
+                    </div>
+                    <div class="buttonGroup">
+                        <input type="email" class="form-control fontSecondary" id="usdAmountInput"
+                            placeholder="Valor en USD" readonly name="usd">
+                        <div>
+                            <button type="reset" class="btn btn-primary btn-sm input converterButton">Limpiar</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="PICUSDRatio fontSecondary">
+                    <p>* 1 PIC (PicaCoin) es equivaliente a
+                    <p id="debugPrice"> 0.5</p>
+                    USD</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-3 fontSecondary">
+        <ul class="nav justify-content-center border-bottom border-secondary pb-3 ms-5 me-5">
+            <li class="nav-item"><a href="../index.html" class="nav-link px-2">Inicio</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">Conversor de PICs</a></li>
+            <li class="nav-item"><a href="shop.html" class="nav-link px-2">Tienda de PIC</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link px-2">Sobre nosotros</a></li>
+        </ul>
+        <div class="d-flex flex-column align-items-center">
+            <img src="../assets/logoFullVar.png" class="logoFooter">
+            <p class="text-center text-white">Copyright 2022 - Desarrollado por <a href="https://www.instagram.com/lauti.goncs" class="text-white">Lautaro Goncalves</a></p>
+        </div>
+    </footer>
+    <script src="../js/header.js"></script>
+    <script src="../js/debug.js" defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/converter.js" defer></script>
+    <script src="../js/user.js"></script>
+</body>
+</html>

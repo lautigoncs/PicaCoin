@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Presentamos PicaCoin, la criptomoneda más innovadora, segura y práctica.">
+    <meta name="keywords" content="crypto, cryptocurrency, new crypto, crypto market, coinmarket, marketcap, money, crypto shop, shop, tienda, tienda crypto, criptomoneda">
+    <title>Sobre PIC - PicaCoin</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <link rel="stylesheet" href="../styles/bootstrap-5.2.0-beta1/dist/css/bootstrap.css">
+    <script src="../styles/bootstrap-5.2.0-beta1/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <div id="popupContent"></div>
+    <header>
+        <nav class="navbar navbar-expand-lg p-2 ps-5 pe-5" id="header">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/logoFull.svg" id="picaCoinLogo" alt="PicaCoin">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="width: 100%;">
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" href="converter.html">Conversor de PIC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" href="shop.html">Comprar PIC</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fontSecondary" href="#">Sobre Nosotros</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-end" id="userAccount">
+                        <a>
+                            <button type="button" class="btn loginBtn fontSecondary" id="button-user">Iniciar
+                                Sesión</button>
+                        </a>
+                        <a>
+                            <button type="button" class="btn registerBtn fontSecondary"
+                                id="button-user">Registrarse</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="aboutHeaderSpacer"></div>
+    <main id="aboutMainContainer">
+        <section id="aboutAboutArea">
+            <h1 class="fontPrimary">Sobre PicaCoin</h1>
+            <p class="fontSecondary aboutText">PicaCoin® es una empresa argentina creada hace 2 años. Actualmente, desarrollamos PIC, una
+                criptomoneda revolucionaria gracias a sus innovadoras características. <br>PIC usa tecnología peer-to-peer o
+                entre pares para operar sin una autoridad central o bancos; la gestión de las transacciones y la emisión
+                de PICs es llevada a cabo de forma colectiva por la red. Nuestra misión en PicaCoin®, es simplificar
+                el mundo de las criptomonedas para poder llevarlas a la vida cotidiana de todas las personas sin
+                necesidad de un conocimiento profundo del mundo tecnológico. Pensamos lograr esto con esta web, ya que
+                en esta se encuentran todas las cosas necesarias para empezar en el mercado de las criptomonedas, estando
+                todo explicado de una forma sencilla de entender para los que no tienen experiencia en este sector, pero a la
+                vez es lo suficientemente complejo para las personas expertas. Próximamente, tenemos la idea de abrir tiendas
+                físicas para hacer así todavía más fácil la adaptación de las cryptos a la vida cotidiana.
+            </p>
+        </section>
+        <section>
+            <form id="aboutContactArea">
+                <h2 class="titleForm fontPrimary">¿Te querés contactar con nosotros?</h2>
+                <div class="aboutContactArea">
+                    <input type="text" class="form-control fontSecondary aboutContactInput" id="floatingInput" placeholder="Nombre"
+                        name="from_name" required>
+                    <input type="email" class="form-control fontSecondary aboutContactInput" id="floatingInput"
+                        placeholder="Email" name="user_email" required>
+                    <textarea class="form-control fontSecondary aboutContactInput" placeholder="Comentarios" id="floatingTextarea2"
+                        style="height: 100px" name="message" minlength="10"></textarea>
+                    <input class="btn btn-dark aboutContactInput fontPrimary" type="submit" value="Enviar" id="button"
+                        class="p-1">
+                </div>
+                <div id="Log fontSecondary"></div>
+            </form>
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script type="text/javascript">
+                emailjs.init('9it1OXsPSgNdyp2RY')
+            </script>
+        </section>
+    </main>
+    <footer class="py-3 fontSecondary">
+        <ul class="nav justify-content-center border-bottom border-secondary pb-3 ms-5 me-5">
+            <li class="nav-item"><a href="../index.html" class="nav-link px-2">Inicio</a></li>
+            <li class="nav-item"><a href="converter.html" class="nav-link px-2">Conversor de PICs</a></li>
+            <li class="nav-item"><a href="shop.html" class="nav-link px-2">Tienda de PIC</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">Sobre nosotros</a></li>
+        </ul>
+        <div class="d-flex flex-column align-items-center">
+            <img src="../assets/logoFullVar.png" class="logoFooter">
+            <p class="text-center text-white">Copyright 2022 - Desarrollado por <a href="https://www.instagram.com/lauti.goncs" class="text-white">Lautaro Goncalves</a></p>
+        </div>
+    </footer>
+    <script src="../js/header.js"></script>
+    <script src="../js/aboutForm.js"></script>
+    <script src="../js/user.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+/*** P O P U P ****/
+
+#popupBackground {
+    height: 100vh;
+    width: 100%;
+    opacity: 100%;
+    position: fixed;
+    z-index: 90;
+    background-color: rgba(0, 0, 0, 0.455);
+    animation: darkBgFadeIn;
+    animation-duration: 1s;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: opacity .5s, backdrop-filter .5s, -webkit-backdrop-filter .5s;
+}
+
+.popupBody, .userBody {
+    height: 50vh;
+    width: 50vw;
+    background-color: #fff;
+    display: flex;
+    z-index: 90;
+    border-radius: 10px;
+    animation: upToDown;
+    animation-duration: 1.5s;
+    flex-direction: row-reverse;
+}
+
+.popupBody {
+    height: 30vh;
+    width: 95vw;
+}
+
+#popupCloseButton, #userCloseButton {
+    background-color: transparent;
+    position: absolute;
+    margin: 1%;
+}
+
+#userCloseButton {
+    right: 25%;
+}
+
+.fadeOut {
+    opacity: 0 !important;
+    backdrop-filter: blur(0) !important;
+    -webkit-backdrop-filter: blur(0) !important;
+}
+
+@media (max-width: 800px) {
+    .popupBody {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        height: 50% !important;
+    }
+    #popupCloseButton {
+        top: 11% ;
+        right: 3% ;
+    }
+}
+
+@keyframes darkBgFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes upToDown {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+/*//////////////////Checkout//////////////////*/
+
+.checkoutWallet {
+    font-size: 2.2vw;
+    margin: 0;
+}
+
+.checkoutText {
+    font-size: 1vw;
+    color: gray;
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .checkoutText {
+        font-size: 1.5vw
+    }
+}
+
+@media (max-width: 800px) {
+    .popupBody {
+        div {
+            .checkoutWallet {
+                font-size: 3.5vw;
+                text-align: center;
+            }
+            .checkoutText {
+                font-size: 2vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .checkoutText {
+        font-size: 3vw !important;
+    }
+}
+
+.userTitle {
+    margin: 0;
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+#bgClosePopup {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 85;
+}

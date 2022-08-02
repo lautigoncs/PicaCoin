@@ -1,0 +1,140 @@
+/**** H E A D E R ****/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+#header {
+    position: fixed;
+    z-index: 15;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: saturate(120%) blur(5px);
+    -webkit-backdrop-filter: saturate(120%) blur(5px);
+    min-height: 80px;
+    transition: height .5s, background-color .2s;
+    #picaCoinLogo {
+        margin: 0;
+        padding: 0;
+        font-weight: bolder;
+        height: 37px;
+        transition: height .5s, filter .5s;
+        &:hover {
+            filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.178));
+            -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.178));
+        }
+    }
+    .nav-link {
+        color: #000000 !important;
+        font-size: 18px;
+        padding-top: 15px;
+        padding-bottom: 0;
+        font-weight: bold;
+        transition: text-shadow .2s, font-size .5s, padding-top .5s !important;
+        &:hover {
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.226);
+        }
+    }
+    #userAccount {
+        width: 50%;
+        a {
+            margin-left: 2%;
+        }
+    }
+}
+
+#debuggingHeader {
+    cursor: pointer;
+    animation-name: debugButton;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes debugButton {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .05;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#button-user {
+    font-size: 15px;
+    padding: 10px;
+    font-weight: 600;
+    background-color: transparent;
+    color: #000000;
+    border: solid 2px rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+    border-radius: 100px;
+    transition: background-color .25s, color .25s, border .25s, font-size .5s;
+    &:hover {
+        background-color: #a5a5a58a;
+        color: #ffffff;
+        border: solid 2px #a5a5a55e;
+    }
+}
+
+@media (max-width:991px) {
+    #userAccount {
+        justify-content: flex-start !important;
+        a {
+            margin-left: 0 !important;
+        }
+    }
+    #header {
+        background-color: #ffffff2b;
+    }
+}
+
+@media (max-width:590px) {
+    .nav-item {
+        font-size: 3vw !important;
+    }
+    #userAccount {
+        a {
+            button {
+                font-size: 3vw !important;
+            }
+        }
+    }
+    #picaCoinLogo {
+        font-size: 135% !important;
+    }
+}
+
+.headerLight {
+    background-color: rgba(255, 255, 255, 0.596) !important;
+}
+
+.headerShrink {
+    min-height: 45px !important;
+    .nav-link {
+        font-size: 13px !important;
+        padding-top: 8px !important;
+    }
+    #button-user {
+        font-size: 11px !important;
+        border-width: 1px !important;
+    }
+    #picaCoinLogo {
+        height: 25px !important;
+    }
+}
+
+.headerExpand {
+    height: 300px !important;
+}
+
+.debugInput {
+    border: solid 1px black;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
