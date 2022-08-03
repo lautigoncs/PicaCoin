@@ -103,15 +103,28 @@
 
 @media (max-width: 800px) {
     .popupBody {
+        height: 80% !important;
         div {
             .checkoutWallet {
                 font-size: 3.5vw;
                 text-align: center;
             }
             .checkoutText {
-                font-size: 2vw;
+                font-size: 3vw;
+            }
+            button {
+                margin: 5%;
             }
         }
+    }
+    .userBody {
+        width: 85vw;
+        #userCloseButton {
+            right: 8%;
+        }
+    }
+    .userTitle {
+        font-size: 7vw !important;
     }
 }
 

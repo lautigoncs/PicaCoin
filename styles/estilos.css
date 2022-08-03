@@ -989,12 +989,27 @@ footer ul li a:hover {
   }
 }
 @media (max-width: 800px) {
+  .popupBody {
+    height: 80% !important;
+  }
   .popupBody div .checkoutWallet {
     font-size: 3.5vw;
     text-align: center;
   }
   .popupBody div .checkoutText {
-    font-size: 2vw;
+    font-size: 3vw;
+  }
+  .popupBody div button {
+    margin: 5%;
+  }
+  .userBody {
+    width: 85vw;
+  }
+  .userBody #userCloseButton {
+    right: 8%;
+  }
+  .userTitle {
+    font-size: 7vw !important;
   }
 }
 @media (max-width: 450px) {
